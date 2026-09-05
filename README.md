@@ -1,4 +1,10 @@
-# CMU F26 36-490 Capstone - Higher Education, Higher Risk? A Quasi-Experimental Test of Victimization Risk Before and After Entering College
+## CMU F26 36-490 Capstone
+
+### Higher Education, Higher Risk? A Quasi-Experimental Test of Victimization Risk Before and After Entering College
+
+In short: **are college students more likely to have a crime committed against them or victimized than someone that doesn’t go to college?**
+
+---
 
 Victimization research has long relied on college student samples, a choice justified not just by sampling convenience but also by theory. For example, some researchers have posited that activities in college life elevate victimization risk. However, it remains unclear whether college students face genuinely higher risk because of college itself, or because of the broader transition out of adolescence and away from parental supervision. This project will use the National Longitudinal Survey of Youth 1997 (NLSY97) to test that question directly. The NLSY97 consists of a nationally representative sample of 8,984 men and women born between 1980-1984 and interviewed annually 1997-2011 and biennially since then. Thus, the NLSY97 provides extensive, longitudinal information about not just college entrance and victimization, but also socioeconomics/demographics, family/environmental factors, and many other variables. Although victimization rates may initially differ between participants who do and do not attend college, a complication is that these two populations may also differ by many confounding factors (e.g., demographics and socioeconomics), thereby making it unclear if college has a causally affects victimization rates.
 
