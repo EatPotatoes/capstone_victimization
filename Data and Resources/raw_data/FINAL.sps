@@ -1,5 +1,5 @@
 
-file handle pcdat/name='FINALDATA.dat' /lrecl=1157.
+file handle pcdat/name='FINAL.dat' /lrecl=1163.
 data list file pcdat free /
   E5111701 (F2)
   E5111702 (F2)
@@ -353,6 +353,8 @@ data list file pcdat free /
   R0536402 (F4)
   R0536600 (F2)
   R0536700 (F2)
+  R0538600 (F2)
+  R0538700 (F2)
   R0648900 (F2)
   R1204700 (F7)
   R1205400 (F2)
@@ -743,6 +745,8 @@ variable labels
   R0536402  "KEY!BDATE M/Y (SYMBOL) 1997"
   R0536600  "KEY!AGE (SYMBOL) 1997"
   R0536700  "KEY!AGEDOL (SYMBOL) 1997"
+  R0538600  "KEY!ETHNICITY (SYMBOL) 1997"
+  R0538700  "KEY!RACE (SYMBOL) 1997"
   R0648900  "R EVER LIVE HARD TIMES? 1997"
   R1204700  "CV_HH_NET_WORTH_P 1997"
   R1205400  "CV_HH_SIZE 1997"
@@ -3371,6 +3375,18 @@ variable labels
     18 "18"
     19 "19 TO 999: GREATER THAN 18"
     /
+ R0538600
+    1 "Yes"
+    0 "No"
+    /
+ R0538700
+    1 "White"
+    2 "Black or African American"
+    3 "American Indian, Eskimo, or Aleut"
+    4 "Asian or Pacific Islander"
+    5 "Something else? (SPECIFY)"
+    0 "No information"
+    /
  R0648900
     1 "Yes"
     0 "No"
@@ -4069,6 +4085,8 @@ variable labels
   (R0536402 = KEY_BDATE_Y_1997)  /* KEY!BDATE_Y */
   (R0536600 = KEY_AGE_1997)  /* KEY!AGE */
   (R0536700 = KEY_AGEDOL_1997)  /* KEY!AGEDOL */
+  (R0538600 = KEY_ETHNICITY_1997)  /* KEY!ETHNICITY */
+  (R0538700 = KEY_RACE_1997)  /* KEY!RACE */
   (R0648900 = PC8_090_1997)  /* PC8-090 */
   (R1204700 = CV_HH_NET_WORTH_P_1997)
   (R1205400 = CV_HH_SIZE_1997)
@@ -4453,6 +4471,8 @@ descriptives all.
   R0536402,
   R0536600,
   R0536700,
+  R0538600,
+  R0538700,
   R0648900,
   R1204700,
   R1205400,
@@ -4833,6 +4853,8 @@ descriptives all.
   KEY_BDATE_Y_1997,
   KEY_AGE_1997,
   KEY_AGEDOL_1997,
+  KEY_ETHNICITY_1997,
+  KEY_RACE_1997,
   PC8_090_1997,
   CV_HH_NET_WORTH_P_1997,
   CV_HH_SIZE_1997,

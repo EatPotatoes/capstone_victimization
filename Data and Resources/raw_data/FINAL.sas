@@ -4,7 +4,7 @@ options nocenter validvarname=any;
 
 data new_data;
 
-infile 'FINALDATA.dat' lrecl=1157 missover DSD DLM=' ' print;
+infile 'FINAL.dat' lrecl=1163 missover DSD DLM=' ' print;
 input
   E5111701
   E5111702
@@ -358,6 +358,8 @@ input
   R0536402
   R0536600
   R0536700
+  R0538600
+  R0538700
   R0648900
   R1204700
   R1205400
@@ -750,6 +752,8 @@ end;
   label R0536402 = "KEY!BDATE M/Y (SYMBOL) 1997";
   label R0536600 = "KEY!AGE (SYMBOL) 1997";
   label R0536700 = "KEY!AGEDOL (SYMBOL) 1997";
+  label R0538600 = "KEY!ETHNICITY (SYMBOL) 1997";
+  label R0538700 = "KEY!RACE (SYMBOL) 1997";
   label R0648900 = "R EVER LIVE HARD TIMES? 1997";
   label R1204700 = "CV_HH_NET_WORTH_P 1997";
   label R1205400 = "CV_HH_SIZE 1997";
@@ -1144,6 +1148,8 @@ end;
   R0536402 = 'KEY!BDATE_Y_1997'n
   R0536600 = 'KEY!AGE_1997'n
   R0536700 = 'KEY!AGEDOL_1997'n
+  R0538600 = 'KEY!ETHNICITY_1997'n
+  R0538700 = 'KEY!RACE_1997'n
   R0648900 = 'PC8-090_1997'n
   R1204700 = 'CV_HH_NET_WORTH_P_1997'n
   R1205400 = 'CV_HH_SIZE_1997'n
@@ -3376,6 +3382,18 @@ value vx352f
   0='No'
 ;
 value vx353f
+  1='White'
+  2='Black or African American'
+  3='American Indian, Eskimo, or Aleut'
+  4='Asian or Pacific Islander'
+  5='Something else? (SPECIFY)'
+  0='No information'
+;
+value vx354f
+  1='Yes'
+  0='No'
+;
+value vx355f
   -999999--3000='-999999 TO -3000: < -2999'
   -2999--2000='-2999 TO -2000'
   -1999--1000='-1999 TO -1000'
@@ -3401,7 +3419,7 @@ value vx353f
   1500001-2000000='1500001 TO 2000000'
   2000001-999999999='2000001 TO 999999999: 2000001+'
 ;
-value vx354f
+value vx356f
   0='0'
   1='1'
   2='2'
@@ -3424,77 +3442,77 @@ value vx354f
   19='19'
   20-99='20 TO 99: 20+'
 ;
-value vx355f
+value vx357f
   1='Cross-sectional'
   0='Oversample'
 ;
-value vx356f
-  0='NONE'
-  1='1ST GRADE'
-  2='2ND GRADE'
-  3='3RD GRADE'
-  4='4TH GRADE'
-  5='5TH GRADE'
-  6='6TH GRADE'
-  7='7TH GRADE'
-  8='8TH GRADE'
-  9='9TH GRADE'
-  10='10TH GRADE'
-  11='11TH GRADE'
-  12='12TH GRADE'
-  13='1ST YEAR COLLEGE'
-  14='2ND YEAR COLLEGE'
-  15='3RD YEAR COLLEGE'
-  16='4TH YEAR COLLEGE'
-  17='5TH YEAR COLLEGE'
-  18='6TH YEAR COLLEGE'
-  19='7TH YEAR COLLEGE'
-  20='8TH YEAR COLLEGE OR MORE'
-  95='UNGRADED'
-;
-value vx357f
-  0='NONE'
-  1='1ST GRADE'
-  2='2ND GRADE'
-  3='3RD GRADE'
-  4='4TH GRADE'
-  5='5TH GRADE'
-  6='6TH GRADE'
-  7='7TH GRADE'
-  8='8TH GRADE'
-  9='9TH GRADE'
-  10='10TH GRADE'
-  11='11TH GRADE'
-  12='12TH GRADE'
-  13='1ST YEAR COLLEGE'
-  14='2ND YEAR COLLEGE'
-  15='3RD YEAR COLLEGE'
-  16='4TH YEAR COLLEGE'
-  17='5TH YEAR COLLEGE'
-  18='6TH YEAR COLLEGE'
-  19='7TH YEAR COLLEGE'
-  20='8TH YEAR COLLEGE OR MORE'
-  95='UNGRADED'
-;
 value vx358f
+  0='NONE'
+  1='1ST GRADE'
+  2='2ND GRADE'
+  3='3RD GRADE'
+  4='4TH GRADE'
+  5='5TH GRADE'
+  6='6TH GRADE'
+  7='7TH GRADE'
+  8='8TH GRADE'
+  9='9TH GRADE'
+  10='10TH GRADE'
+  11='11TH GRADE'
+  12='12TH GRADE'
+  13='1ST YEAR COLLEGE'
+  14='2ND YEAR COLLEGE'
+  15='3RD YEAR COLLEGE'
+  16='4TH YEAR COLLEGE'
+  17='5TH YEAR COLLEGE'
+  18='6TH YEAR COLLEGE'
+  19='7TH YEAR COLLEGE'
+  20='8TH YEAR COLLEGE OR MORE'
+  95='UNGRADED'
+;
+value vx359f
+  0='NONE'
+  1='1ST GRADE'
+  2='2ND GRADE'
+  3='3RD GRADE'
+  4='4TH GRADE'
+  5='5TH GRADE'
+  6='6TH GRADE'
+  7='7TH GRADE'
+  8='8TH GRADE'
+  9='9TH GRADE'
+  10='10TH GRADE'
+  11='11TH GRADE'
+  12='12TH GRADE'
+  13='1ST YEAR COLLEGE'
+  14='2ND YEAR COLLEGE'
+  15='3RD YEAR COLLEGE'
+  16='4TH YEAR COLLEGE'
+  17='5TH YEAR COLLEGE'
+  18='6TH YEAR COLLEGE'
+  19='7TH YEAR COLLEGE'
+  20='8TH YEAR COLLEGE OR MORE'
+  95='UNGRADED'
+;
+value vx360f
   1='Black'
   2='Hispanic'
   3='Mixed Race (Non-Hispanic)'
   4='Non-Black / Non-Hispanic'
 ;
-value vx359f
-  1='Yes'
-  0='No'
-;
-value vx360f
-  1='Yes'
-  0='No'
-;
 value vx361f
+  1='Yes'
+  0='No'
+;
+value vx362f
+  1='Yes'
+  0='No'
+;
+value vx363f
   1='YES'
   0='NO'
 ;
-value vx362f
+value vx364f
   0='0'
   1-999='1 TO 999: .001-.999'
   1000-19999='1000 TO 19999: 1.000-19.999'
@@ -3503,15 +3521,15 @@ value vx362f
   60000-79999='60000 TO 79999: 60.000-79.999'
   80000-100000='80000 TO 100000: 80.000-100.000'
 ;
-value vx363f
-  1='YES'
-  0='NO'
-;
-value vx364f
-  1='YES'
-  0='NO'
-;
 value vx365f
+  1='YES'
+  0='NO'
+;
+value vx366f
+  1='YES'
+  0='NO'
+;
+value vx367f
   0='0'
   1='1'
   2='2'
@@ -3534,46 +3552,9 @@ value vx365f
   19='19'
   20-999999='20 TO 999999: 20+'
 ;
-value vx366f
-  1='YES'
-  0='NO'
-;
-value vx367f
-  1='YES'
-  0='NO'
-;
 value vx368f
-  0='0'
-  1='1'
-  2='2'
-  3='3'
-  4='4'
-  5='5'
-  6='6'
-  7='7'
-  8='8'
-  9='9'
-  10='10'
-  11='11'
-  12='12'
-  13='13'
-  14='14'
-  15='15'
-  16='16'
-  17='17'
-  18='18'
-  19='19'
-  20='20'
-  21='21'
-  22='22'
-  23='23'
-  24='24'
-  25='25'
-  26='26'
-  27='27'
-  28='28'
-  29='29'
-  30='30'
+  1='YES'
+  0='NO'
 ;
 value vx369f
   1='YES'
@@ -3654,14 +3635,51 @@ value vx373f
   0='NO'
 ;
 value vx374f
-  1='YES'
-  0='NO'
+  0='0'
+  1='1'
+  2='2'
+  3='3'
+  4='4'
+  5='5'
+  6='6'
+  7='7'
+  8='8'
+  9='9'
+  10='10'
+  11='11'
+  12='12'
+  13='13'
+  14='14'
+  15='15'
+  16='16'
+  17='17'
+  18='18'
+  19='19'
+  20='20'
+  21='21'
+  22='22'
+  23='23'
+  24='24'
+  25='25'
+  26='26'
+  27='27'
+  28='28'
+  29='29'
+  30='30'
 ;
 value vx375f
   1='YES'
   0='NO'
 ;
 value vx376f
+  1='YES'
+  0='NO'
+;
+value vx377f
+  1='YES'
+  0='NO'
+;
+value vx378f
   0='0'
   1='1'
   2='2'
@@ -3704,7 +3722,7 @@ value vx376f
   39='39'
   40-999='40 TO 999: 40+'
 ;
-value vx377f
+value vx379f
   1='YES'
   0='NO'
 ;
@@ -4065,32 +4083,34 @@ tables _ALL_ /MISSING;
   format R0536401 vx348f.;
   format R0536600 vx350f.;
   format R0536700 vx351f.;
-  format R0648900 vx352f.;
-  format R1204700 vx353f.;
-  format R1205400 vx354f.;
-  format R1235800 vx355f.;
-  format R1302400 vx356f.;
-  format R1302500 vx357f.;
-  format R1482600 vx358f.;
-  format R3548100 vx359f.;
-  format R4963900 vx360f.;
-  format R6596800 vx361f.;
-  format R9829600 vx362f.;
-  format S0980400 vx363f.;
-  format S1242700 vx364f.;
-  format S1242800 vx365f.;
-  format S3019500 vx366f.;
-  format T1064700 vx367f.;
-  format T1064800 vx368f.;
-  format T3158400 vx369f.;
-  format T3158500 vx370f.;
-  format T4576400 vx371f.;
-  format T4576500 vx372f.;
-  format T8218800 vx373f.;
-  format T8219200 vx374f.;
-  format T9107600 vx375f.;
-  format T9107700 vx376f.;
-  format Z0442300 vx377f.;
+  format R0538600 vx352f.;
+  format R0538700 vx353f.;
+  format R0648900 vx354f.;
+  format R1204700 vx355f.;
+  format R1205400 vx356f.;
+  format R1235800 vx357f.;
+  format R1302400 vx358f.;
+  format R1302500 vx359f.;
+  format R1482600 vx360f.;
+  format R3548100 vx361f.;
+  format R4963900 vx362f.;
+  format R6596800 vx363f.;
+  format R9829600 vx364f.;
+  format S0980400 vx365f.;
+  format S1242700 vx366f.;
+  format S1242800 vx367f.;
+  format S3019500 vx368f.;
+  format T1064700 vx369f.;
+  format T1064800 vx370f.;
+  format T3158400 vx371f.;
+  format T3158500 vx372f.;
+  format T4576400 vx373f.;
+  format T4576500 vx374f.;
+  format T8218800 vx375f.;
+  format T8219200 vx376f.;
+  format T9107600 vx377f.;
+  format T9107700 vx378f.;
+  format Z0442300 vx379f.;
 run;
 */
 
@@ -4449,31 +4469,33 @@ tables _ALL_ /MISSING;
   format 'KEY!BDATE_M_1997'n vx348f.;
   format 'KEY!AGE_1997'n vx350f.;
   format 'KEY!AGEDOL_1997'n vx351f.;
-  format 'PC8-090_1997'n vx352f.;
-  format 'CV_HH_NET_WORTH_P_1997'n vx353f.;
-  format 'CV_HH_SIZE_1997'n vx354f.;
-  format 'CV_SAMPLE_TYPE_1997'n vx355f.;
-  format 'CV_HGC_BIO_DAD_1997'n vx356f.;
-  format 'CV_HGC_BIO_MOM_1997'n vx357f.;
-  format 'KEY!RACE_ETHNICITY_1997'n vx358f.;
-  format 'YSAQ-518_1999'n vx359f.;
-  format 'YSAQ-518_2000'n vx360f.;
-  format 'YSAQ-518_2001'n vx361f.;
-  format 'ASVAB_MATH_VERBAL_SCORE_PCT_XRND'n vx362f.;
-  format 'YSAQ-518_2002'n vx363f.;
-  format 'YHEA-2500_2002'n vx364f.;
-  format 'YHEA-2520_2002'n vx365f.;
-  format 'YSAQ-518_2003'n vx366f.;
-  format 'YHEA-2500_2007'n vx367f.;
-  format 'YHEA-2520_2007'n vx368f.;
-  format 'YHEA-2500A_2008'n vx369f.;
-  format 'YHEA-2520_2008'n vx370f.;
-  format 'YHEA-2500A_2009'n vx371f.;
-  format 'YHEA-2520_2009'n vx372f.;
-  format 'YHHI-PARENT-2_2013'n vx373f.;
-  format 'YHHI-PARENT-5_2013'n vx374f.;
-  format 'YHEA-2500_2013'n vx375f.;
-  format 'YHEA-2520_2013'n vx376f.;
-  format 'YCHR-450_COMB_XRND'n vx377f.;
+  format 'KEY!ETHNICITY_1997'n vx352f.;
+  format 'KEY!RACE_1997'n vx353f.;
+  format 'PC8-090_1997'n vx354f.;
+  format 'CV_HH_NET_WORTH_P_1997'n vx355f.;
+  format 'CV_HH_SIZE_1997'n vx356f.;
+  format 'CV_SAMPLE_TYPE_1997'n vx357f.;
+  format 'CV_HGC_BIO_DAD_1997'n vx358f.;
+  format 'CV_HGC_BIO_MOM_1997'n vx359f.;
+  format 'KEY!RACE_ETHNICITY_1997'n vx360f.;
+  format 'YSAQ-518_1999'n vx361f.;
+  format 'YSAQ-518_2000'n vx362f.;
+  format 'YSAQ-518_2001'n vx363f.;
+  format 'ASVAB_MATH_VERBAL_SCORE_PCT_XRND'n vx364f.;
+  format 'YSAQ-518_2002'n vx365f.;
+  format 'YHEA-2500_2002'n vx366f.;
+  format 'YHEA-2520_2002'n vx367f.;
+  format 'YSAQ-518_2003'n vx368f.;
+  format 'YHEA-2500_2007'n vx369f.;
+  format 'YHEA-2520_2007'n vx370f.;
+  format 'YHEA-2500A_2008'n vx371f.;
+  format 'YHEA-2520_2008'n vx372f.;
+  format 'YHEA-2500A_2009'n vx373f.;
+  format 'YHEA-2520_2009'n vx374f.;
+  format 'YHHI-PARENT-2_2013'n vx375f.;
+  format 'YHHI-PARENT-5_2013'n vx376f.;
+  format 'YHEA-2500_2013'n vx377f.;
+  format 'YHEA-2520_2013'n vx378f.;
+  format 'YCHR-450_COMB_XRND'n vx379f.;
 run;
 */

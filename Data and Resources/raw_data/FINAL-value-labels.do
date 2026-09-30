@@ -1050,6 +1050,12 @@ label values R0536600 vlR0536600
 label define vlR0536700 0 "0 TO 11: LESS THAN 12" 12 "12" 13 "13" 14 "14" 15 "15" 16 "16" 17 "17" 18 "18" 19 "19 TO 999: GREATER THAN 18" 
 label values R0536700 vlR0536700
 
+label define vlR0538600 1 "Yes" 0 "No" 
+label values R0538600 vlR0538600
+
+label define vlR0538700 1 "White" 2 "Black or African American" 3 "American Indian, Eskimo, or Aleut" 4 "Asian or Pacific Islander" 5 "Something else? (SPECIFY)" 0 "No information" 
+label values R0538700 vlR0538700
+
 label define vlR0648900 1 "Yes" 0 "No" 
 label values R0648900 vlR0648900
 
@@ -1486,6 +1492,8 @@ label values Z0442300 vlZ0442300
   rename R0536402 KEY!BDATE_Y_1997
   rename R0536600 KEY!AGE_1997
   rename R0536700 KEY!AGEDOL_1997
+  rename R0538600 KEY!ETHNICITY_1997
+  rename R0538700 KEY!RACE_1997
   rename R0648900 PC8_090_1997   // PC8-090
   rename R1204700 CV_HH_NET_WORTH_P_1997
   rename R1205400 CV_HH_SIZE_1997

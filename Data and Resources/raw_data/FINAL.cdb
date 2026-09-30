@@ -8651,6 +8651,52 @@ Min:             12        Max:             16        Mean:               13.99
 Lead In: R05366.00[Default]
 Default Next Question: R05368.00
 --------------------------------------------------------------------------------
+R05386.00    [KEY!ETHNICITY]                                Survey Year: 1997
+  SECONDARY VARIABLE
+
+             KEY!ETHNICITY, IS R HISPANIC (SYMBOL)
+ 
+COMMENT: Is R Hispanic?
+ 
+    1899       1 Yes
+    7061       0 No
+  -------
+    8960
+ 
+Refusal(-1)            9
+Don't Know(-2)        15
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .21
+ 
+Lead In: R05382.00[Default]
+Default Next Question: R05387.00
+--------------------------------------------------------------------------------
+R05387.00    [KEY!RACE]                                     Survey Year: 1997
+  SECONDARY VARIABLE
+
+             KEY!RACE, RACE OF R (SYMBOL)
+ 
+COMMENT: KEY RACE
+ 
+    5232       1 White
+    2388       2 Black or African American
+      61       3 American Indian, Eskimo, or Aleut
+     160       4 Asian or Pacific Islander
+    1063       5 Something else? (SPECIFY)
+       0       0 No information
+  -------
+    8904
+ 
+Refusal(-1)           17
+Don't Know(-2)        63
+TOTAL =========>    8984   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              5        Mean:                1.81
+ 
+Lead In: R05386.00[Default]
+Default Next Question: R14826.00
+--------------------------------------------------------------------------------
 R06489.00    [PC8-090]                                      Survey Year: 1997
   PRIMARY VARIABLE
 
