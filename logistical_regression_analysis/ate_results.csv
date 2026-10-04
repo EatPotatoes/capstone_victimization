@@ -1,0 +1,4 @@
+estimator,E[Y(1)] (%),E[Y(0)] (%),ATE (pp),bootstrap SE (pp),95% CI low (pp),95% CI high (pp)
+Regression (tau_reg),5.96,6.22,-0.25,0.58,-1.36,0.87
+IPW (tau_IPW),5.81,6.38,-0.57,0.65,-1.88,0.77
+Doubly robust (tau_DR),5.82,6.11,-0.29,0.62,-1.58,0.95
