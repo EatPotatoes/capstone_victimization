@@ -1,0 +1,16 @@
+{
+  "analysis_sample_n": 8467,
+  "ate": -0.0036884213530581048,
+  "ci_lower": -0.0156351745421091,
+  "ci_upper": 0.00825833183599289,
+  "effect_scale": "risk_difference",
+  "estimand": "ATE",
+  "estimator": "aipw",
+  "outcome_model": "rf",
+  "p_value": 0.5450605765839978,
+  "propensity_model": "xgb",
+  "propensity_truncation": null,
+  "risk_control": 0.062060268555264635,
+  "risk_treated": 0.058371847202206534,
+  "standard_error": 0.006094522801124937
+}

@@ -1,0 +1,38 @@
+{
+  "analysis_sample_n": 8467,
+  "candidate_models": [
+    "logit",
+    "rf",
+    "xgb"
+  ],
+  "estimand": "ATE",
+  "model_parameters": {
+    "logit": {
+      "C": 1.0,
+      "max_iter": 2000
+    },
+    "rf": {
+      "max_depth": 6,
+      "max_features": "sqrt",
+      "min_samples_leaf": 30,
+      "n_estimators": 1000
+    },
+    "xgb": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "min_child_weight": 5,
+      "n_estimators": 200,
+      "reg_lambda": 5.0,
+      "subsample": 0.8
+    }
+  },
+  "n_splits": 5,
+  "primary_propensity_model": "xgb",
+  "propensity_truncation": null,
+  "seeds": [
+    0,
+    1,
+    2
+  ]
+}
