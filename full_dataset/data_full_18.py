@@ -1,10 +1,12 @@
 # %%
 import pandas as pd
 
-dataset = pd.read_csv("/Users/nicoletimko/Desktop/capstone_victimization/full_dataset/full_data.csv")
+dataset = pd.read_csv("full_data.csv")
+
+print(dataset)
 
 
-# %%
+# %%cd
 victim_cols = ["violent_victim_2002", "violent_victim_2007", "violent_victim_2008", "violent_victim_2009", "violent_victim_2013"]
 
 victim_data = dataset[victim_cols].apply(pd.to_numeric, errors="coerce")
