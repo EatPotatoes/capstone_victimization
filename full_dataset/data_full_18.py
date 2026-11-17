@@ -1,7 +1,7 @@
 # %%
 import pandas as pd
 
-dataset = pd.read_csv("final_data.csv")
+dataset = pd.read_csv("full_data.csv")
 
 print(dataset)
 
