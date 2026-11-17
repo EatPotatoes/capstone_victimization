@@ -1,0 +1,2 @@
+model,RF_MSE,baseline_MSE,apparent_pseudo_R2
+random_forest,0.22891929818605344,0.23675382969655318,0.03309146686472286
