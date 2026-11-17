@@ -1,7 +1,7 @@
 # %%
 import pandas as pd
 
-dataset = pd.read_csv("full_data.csv")
+dataset = pd.read_csv("final_data.csv")
 
 print(dataset)
 
@@ -195,6 +195,7 @@ for col in outcome_columns:
 
 
 # %%
-dataset.to_csv("/Users/nicoletimko/Desktop/capstone_victimization/full_dataset/data_with_Y_18.csv")
+dataset.to_csv("/Users/nicoletimko/Desktop/cmu_year3/capstone_victimization/full_dataset/data_with_Y_18.csv")
 
 
+# %%
